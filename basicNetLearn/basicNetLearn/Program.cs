@@ -118,6 +118,25 @@ namespace basicNetLearn
                 Console.WriteLine("\t" + dicEntry.Key + "\t" + dicEntry.Value);
             }
             Console.WriteLine(hashtable.ContainsKey("id"));
+            
+            Chapter8_9.Date date = new Chapter8_9.Date();
+            date.Day = 12;
+            Console.WriteLine(date.Day);
+
+            StructTest structTest;
+            structTest.width = 2.4;
+            structTest.height = 4.5;
+            Console.WriteLine("area: " + structTest.Area());
+            
+            StructTest structTest2 = new StructTest(4.0, 4.0);
+            Console.WriteLine("area2: " + structTest2.Area());
+            
+            // class
+            ChildClass childClass = new ChildClass();
+            ClassTest classTest = childClass;
+            classTest.X = 12;
+            classTest.Y = 23;
+            Console.WriteLine(classTest.Add());
         }
     }
 }
